@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- BOCA boca-1.5.13. Copyright (c) 2003-2017 Cassio Polpo de Campos -->
+<!-- http://www.ime.usp.br/~cassio/boca                                  -->
+<!-- This program is free software: you can redistribute it and/or modify  -->
+<!-- it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or -->
+<!-- (at your option) any later version. A copy of the  -->
+<!-- license can be found with this software or at http://www.gnu.org/licenses/ -->
+<html>
+<head>
+	<!--Se cambia la ubicación del title ya que en el código original se encuentra fuera del HEAD-->
+	<title>BOCA Online Contest Administrator boca-1.5.13 - Login</title>
+	<!--Inclusión de Bootstrap mediante CDN-->
+	<!------------------------------------------------------------>
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!------------------------------------------------------------>
+	<!--Estilos CSS propios-->
+	<!------------------------------------------------------------>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<!------------------------------------------------------------>
+	<!--Los estilos href="Css.php" no se incluyen por el momento ya que desconocemos la técnica de implementar CCS en un fichero .php, nos guiaremos por el contenido del modulo donde se indica que los estilos CSS van cargados desde un fichero .css-->
+	<!------------------------------------------------------------>
+	<!--JavaScript: Se omite el atributo type="text/javascript" ya que en HTML5 no es necesario pues JavaScript es el lenguaje de Scripting por default-->
+	<!--De momento se mantiene el código JS provisto en el código original-->
+	<script src="js/main.js"></script>
+	<!------------------------------------------------------------>
+</head>
+<body>
+	<!--Hacemos uso de contenedores, filas y paneles de Bootstrap para la visualización de los componentes-->
+    <div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-4 col-md-offset-4">
+				<div class="panel panel-default">
+					<div id="frame-encabezado">
+						<div id="title-box"><p><strong> BOCA Login</strong></p></div>
+					</div>
+					<div id="frame">
+						<!--<form role="form" action="#" method="POST">-->
+						<form name="form1" action="javascript:computeHASH()">
+							<fieldset>
+								<div class="row">
+									<div class="center-block">
+										<img id="img-user" src="img/user.png" alt="">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 col-md-10  col-md-offset-1 ">
+										<div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon">
+													<i class="glyphicon glyphicon-user"></i>
+												</span> 
+												<input class="form-control" placeholder="Your username" name="user" type="text" autofocus>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon">
+													<i class="glyphicon glyphicon-lock"></i>
+												</span>
+												<input class="form-control" placeholder="Your password" name="pass" type="password" value="">
+											</div>
+										</div>
+										<div class="form-group">
+											<input type="submit" class="btn btn-lg btn-primary btn-block" value="LOGIN">
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div id="frame-pie">
+						<p>Powered by BOCA boca-1.5.13. Copyright (c) 2003-2017 BOCA System (bocasystem@gmail.com). All rights reserved.</p>
+					</div>
+                </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
