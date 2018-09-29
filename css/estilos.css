@@ -87,7 +87,8 @@
 	border-radius: 2px;
 }
 
-#menu > ul > li:hover {
+#menu > ul > li:hover, #menu>ul>li>a:hover {
 	background-color: #4B82C3;
 	font-size: 1.3em;
+	color: #FFF;
 }
