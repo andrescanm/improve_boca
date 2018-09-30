@@ -23,12 +23,12 @@
 	<!------------------------------------------------------------>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-12" id="titulo"><p><strong>BOCA</strong></p></div>
-		</div>
-		<!--Se remplaza el esquema de maquetación con tablas del codigo original y se usará en su lugar el elemento nav de Bootstrap-->
-		<!--Los elementos <td> originales tienen un class=menu en esta instancia será retirado este atributo y en posteriores entregas se validará si realmente es necesario por funcionalidad-->
+<div class="container">
+	<div class="row">
+		<div class="col-12" id="titulo"><p><strong>BOCA</strong></p></div>
+	</div>
+	<!--Se remplaza el esquema de maquetación con tablas del codigo original y se usará en su lugar el elemento nav de Bootstrap-->
+	<!--Los elementos <td> originales tienen un class=menu en esta instancia será retirado este atributo y en posteriores entregas se validará si realmente es necesario por funcionalidad-->
 		<div class="row">
 			<div class="col-3" id="menu">
 				<ul class="nav flex-column"">
@@ -51,7 +51,20 @@
 				</ul>
 			</div>
 			<div class="col-9"">
-				<h2>Contenido de la p&aacute;gina</h2>
+				<!-- Se comenta código cuya funcionalidad se desconoce en este momento -->
+				<!-- <br><img src="/boca/images/smallballoontransp.png" alt="" onload="javascript:toggleGroup(1)">  -->
+				<b>Available scores:</b> 
+				<br>
+				<br>
+				<table class="table table-striped">
+					<tr>
+						<td><b>#</b></td>
+						<td><b>User/Site</b></td>
+						<td><b>Name</b></td>
+						<td><b>Total</b></td>
+					</tr>
+				</table>
+				<br><b>SCOREBOARD IS EMPTY</b>
 			</div>
 		</div>
 		<div class="row" id="footer">
@@ -66,6 +79,7 @@
 	<!--JavaScript: Se omite el atributo type="text/javascript" ya que en HTML5 no es necesario pues JavaScript es el lenguaje de Scripting por default-->
 	<!--De momento se mantiene el código JS provisto en el código original-->
 	<script src="js/main.js"></script>
+	<script src="js/hide.js"></script>
 	<!------------------------------------------------------------>
 </body>
 </html>

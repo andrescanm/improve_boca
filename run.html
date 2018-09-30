@@ -29,43 +29,63 @@
 		</div>
 		<!--Se remplaza el esquema de maquetación con tablas del codigo original y se usará en su lugar el elemento nav de Bootstrap-->
 		<!--Los elementos <td> originales tienen un class=menu en esta instancia será retirado este atributo y en posteriores entregas se validará si realmente es necesario por funcionalidad-->
-		<div class="row">
-			<div class="col-3" id="menu">
-				<ul class="nav flex-column"">
-					<li class="nav-item"><a class="nav-link" href="run.html">Runs</a></li>
-					<li class="nav-item"><a class="nav-link" href="score.html">Score</a></li>
-					<li class="nav-item"><a class="nav-link" href="clar.html">Clarifications</a></li>
-					<li class="nav-item"><a class="nav-link" href="user.html">Users</a></li>
-					<li class="nav-item"><a class="nav-link" href="problem.html">Problems</a></li>
-					<li class="nav-item"><a class="nav-link" href="language.html">Languages</a></li>
-					<li class="nav-item"><a class="nav-link" href="answer.html">Answers</a></li>
-					<li class="nav-item"><a class="nav-link" href="misc.html">Misc</a></li>
-					<li class="nav-item"><a class="nav-link" href="task.html">Tasks</a></li>
-					<li class="nav-item"><a class="nav-link" href="site.html">Site</a></li>
-					<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
-					<li class="nav-item"><a class="nav-link" href="log.html">Logs</a></li>
-					<li class="nav-item"><a class="nav-link" href="report.html">Reports</a></li>
-					<li class="nav-item"><a class="nav-link" href="files.html">Backups</a></li>
-					<li class="nav-item"><a class="nav-link" href="option.html">Options</a></li>
-					<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
-				</ul>
+			<div class="row">
+				<div class="col-3" id="menu">
+					<ul class="nav flex-column"">
+						<li class="nav-item"><a class="nav-link" href="run.html">Runs</a></li>
+						<li class="nav-item"><a class="nav-link" href="score.html">Score</a></li>
+						<li class="nav-item"><a class="nav-link" href="clar.html">Clarifications</a></li>
+						<li class="nav-item"><a class="nav-link" href="user.html">Users</a></li>
+						<li class="nav-item"><a class="nav-link" href="problem.html">Problems</a></li>
+						<li class="nav-item"><a class="nav-link" href="language.html">Languages</a></li>
+						<li class="nav-item"><a class="nav-link" href="answer.html">Answers</a></li>
+						<li class="nav-item"><a class="nav-link" href="misc.html">Misc</a></li>
+						<li class="nav-item"><a class="nav-link" href="task.html">Tasks</a></li>
+						<li class="nav-item"><a class="nav-link" href="site.html">Site</a></li>
+						<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
+						<li class="nav-item"><a class="nav-link" href="log.html">Logs</a></li>
+						<li class="nav-item"><a class="nav-link" href="report.html">Reports</a></li>
+						<li class="nav-item"><a class="nav-link" href="files.html">Backups</a></li>
+						<li class="nav-item"><a class="nav-link" href="option.html">Options</a></li>
+						<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
+					</ul>
+				</div>
+				<div class="col-9"">
+					<!--Content-->
+					<!--Se eliminan etiquetas como 'center' las cuales están deprecadas en HTML5-->
+					<form name="form1" method="post" action="run.php">
+						<input type=hidden name="confirmation" value="noconfirm" />
+						<br>
+						<table class="table table-striped table-responsive">
+							<tr>
+								<td><b><a href="run.php?order=run">Run #</a></b></td>
+								<td><b><a href="run.php?order=site">Site</a></b></td>
+								<td><b><a href="run.php?order=user">User</a></b></td>
+								<td><b>Time</b></td>
+								<td><b><a href="run.php?order=problem">Problem</a></b></td>
+								<td><b><a href="run.php?order=language">Language</a></b></td>
+								<!--  <td><b>Filename</b></td> -->
+								<td><b><a href="run.php?order=status">Status</a></b></td>
+								<td><b><a href="run.php?order=judge">Judge (Site)</a></b></td>
+								<td><b>AJ</b></td>
+								<td><b><a href="run.php?order=answer">Answer</a></b></td>
+							</tr>
+						</table>
+						<br><b>NO RUNS AVAILABLE</b>
+					</div>
+				</div>
+				<div class="row" id="footer">
+					<p>Powered by BOCA boca-1.5.13. Copyright (c) 2003-2017 BOCA System (bocasystem@gmail.com). All rights reserved.</p>
+				</div>
 			</div>
-			<div class="col-9"">
-				<h2>Contenido de la p&aacute;gina</h2>
-			</div>
-		</div>
-		<div class="row" id="footer">
-			<p>Powered by BOCA boca-1.5.13. Copyright (c) 2003-2017 BOCA System (bocasystem@gmail.com). All rights reserved.</p>
-		</div>
-	</div>
-	<!--JS de Bootstrap-->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	<!------------------------------------------------------------>
-	<!--JavaScript: Se omite el atributo type="text/javascript" ya que en HTML5 no es necesario pues JavaScript es el lenguaje de Scripting por default-->
-	<!--De momento se mantiene el código JS provisto en el código original-->
-	<script src="js/main.js"></script>
-	<!------------------------------------------------------------>
-</body>
-</html>
+			<!--JS de Bootstrap-->
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+			<!------------------------------------------------------------>
+			<!--JavaScript: Se omite el atributo type="text/javascript" ya que en HTML5 no es necesario pues JavaScript es el lenguaje de Scripting por default-->
+			<!--De momento se mantiene el código JS provisto en el código original-->
+			<script src="js/main.js"></script>
+			<!------------------------------------------------------------>
+		</body>
+		</html>
