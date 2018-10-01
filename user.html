@@ -29,269 +29,261 @@
 		</div>
 		<!--Se remplaza el esquema de maquetación con tablas del codigo original y se usará en su lugar el elemento nav de Bootstrap-->
 		<!--Los elementos <td> originales tienen un class=menu en esta instancia será retirado este atributo y en posteriores entregas se validará si realmente es necesario por funcionalidad-->
-	<div class="row">
-		<div class="col-3" id="menu">
-			<ul class="nav flex-column"">
-				<li class="nav-item"><a class="nav-link" href="run.html">Runs</a></li>
-				<li class="nav-item"><a class="nav-link" href="score.html">Score</a></li>
-				<li class="nav-item"><a class="nav-link" href="clar.html">Clarifications</a></li>
-				<li class="nav-item"><a class="nav-link" href="user.html">Users</a></li>
-				<li class="nav-item"><a class="nav-link" href="problem.html">Problems</a></li>
-				<li class="nav-item"><a class="nav-link" href="language.html">Languages</a></li>
-				<li class="nav-item"><a class="nav-link" href="answer.html">Answers</a></li>
-				<li class="nav-item"><a class="nav-link" href="misc.html">Misc</a></li>
-				<li class="nav-item"><a class="nav-link" href="task.html">Tasks</a></li>
-				<li class="nav-item"><a class="nav-link" href="site.html">Site</a></li>
-				<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
-				<li class="nav-item"><a class="nav-link" href="log.html">Logs</a></li>
-				<li class="nav-item"><a class="nav-link" href="report.html">Reports</a></li>
-				<li class="nav-item"><a class="nav-link" href="files.html">Backups</a></li>
-				<li class="nav-item"><a class="nav-link" href="option.html">Options</a></li>
-				<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
-			</ul>
-		</div>
-		<div class="col-9"">
-			<div class="row">
-			<table class="table table-striped table-responsive nowrap">
-				<tr>
-					<td ><b>User #</b></td>
-					<td><b>Site</b></td>
-					<td><b>Username</b></td>
-					<td><b>ICPC ID</b></td>
-					<td><b>Type</b></td>
-					<td><b>IP</b></td>
-					<td><b>LastLogin</b></td>
-					<td><b>LastLogout</b></td>
-					<td><b>Enabled</b></td>
-					<td><b>Multi</b></td>
-					<td><b>Fullname</b></td>
-					<td><b>Description</b></td>
-				</tr>
-				<tr>
-					<td ><a href="user.php?site=1&user=1">1</a></td>
-					<td >1</td>
-					<td >andresc</td>
-					<td ></td>
-					<td >team</td>
-					<td ></td>
-					<td >never</td>
-					<td >never</td>
-					<td >Yes</td>
-					<td >Yes</td>
-					<td >Andrés Cañón</td>
-					<td ></td>
-				</tr> <tr>
-					<td ><a href="user.php?site=1&user=2">2</a></td>
-					<td >1</td>
-					<td >carolb</td>
-					<td ></td>
-					<td >team</td>
-					<td ></td>
-					<td >never</td>
-					<td >never</td>
-					<td >Yes</td>
-					<td >Yes</td>
-					<td >Carol Becerra</td>
-					<td ></td>
-				</tr> <tr>
-					<td ><a href="user.php?site=1&user=3">3</a></td>
-					<td >1</td>
-					<td >germanc</td>
-					<td ></td>
-					<td >team</td>
-					<td ></td>
-					<td >never</td>
-					<td >never</td>
-					<td >Yes</td>
-					<td >Yes</td>
-					<td >Germán Cachope</td>
-					<td ></td>
-				</tr> <tr>
-					<td ><a href="user.php?site=1&user=4">4</a></td>
-					<td >1</td>
-					<td >test</td>
-					<td ></td>
-					<td >team</td>
-					<td ></td>
-					<td >never</td>
-					<td >never</td>
-					<td >Yes</td>
-					<td >Yes</td>
-					<td >Test User</td>
-					<td ></td>
-				</tr> <tr>
-					<td >1000</td>
-					<td >1</td>
-					<td >admin</td>
-					<td ></td>
-					<td >admin</td>
-					<td >192.168.0.5</td>
-					<td >14:45:04 EDT - 30/Sep/2018</td>
-					<td ><a href="javascript: conf2('user.php?logout=1&site=1&user=1000')">Force Logout</a></td>
-					<td >Yes</td>
-					<td >Yes</td>
-					<td >Administrator</td>
-					<td ></td>
-				</tr>
-			</table>
-				</div><!--div.row-->
-
-
-<div class="container">
-				<div class="row justify-content-md-center" id="user-info-1">	
-				<br><br><b>Clicking on a user number will bring the user data for edition.<br>
-					To import the users, just fill in the import file field.<br>
-				The file must be in the format defined in the admin's manual.</b>
-				</div><!--div.row-->
-</div><!--div.container-->
-				<form name="form1" enctype="multipart/form-data" method="post" action="user.php">
-					<input type=hidden name="confirmation" value="noconfirm" />
-					<center>
-						<table border="0">
+		<div class="row">
+			<div class="col-3" id="menu">
+				<ul class="nav flex-column"">
+					<li class="nav-item"><a class="nav-link" href="run.html">Runs</a></li>
+					<li class="nav-item"><a class="nav-link" href="score.html">Score</a></li>
+					<li class="nav-item"><a class="nav-link" href="clar.html">Clarifications</a></li>
+					<li class="nav-item"><a class="nav-link" href="user.html">Users</a></li>
+					<li class="nav-item"><a class="nav-link" href="problem.html">Problems</a></li>
+					<li class="nav-item"><a class="nav-link" href="language.html">Languages</a></li>
+					<li class="nav-item"><a class="nav-link" href="answer.html">Answers</a></li>
+					<li class="nav-item"><a class="nav-link" href="misc.html">Misc</a></li>
+					<li class="nav-item"><a class="nav-link" href="task.html">Tasks</a></li>
+					<li class="nav-item"><a class="nav-link" href="site.html">Site</a></li>
+					<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
+					<li class="nav-item"><a class="nav-link" href="log.html">Logs</a></li>
+					<li class="nav-item"><a class="nav-link" href="report.html">Reports</a></li>
+					<li class="nav-item"><a class="nav-link" href="files.html">Backups</a></li>
+					<li class="nav-item"><a class="nav-link" href="option.html">Options</a></li>
+					<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
+				</ul>
+			</div>
+			<div class="col-9"">
+				<div class="container">
+					<div class="row">
+						<table class="table table-striped table-responsive nowrap table-users">
 							<tr>
-								<td width="25%" align=right>Import file:</td>
-								<td width="75%">
-									<input type="file" name="importfile" size="40">
-								</td>
+								<td ><b>User #</b></td>
+								<td><b>Site</b></td>
+								<td><b>Username</b></td>
+								<td><b>ICPC ID</b></td>
+								<td><b>Type</b></td>
+								<td><b>IP</b></td>
+								<td><b>LastLogin</b></td>
+								<td><b>LastLogout</b></td>
+								<td><b>Enabled</b></td>
+								<td><b>Multi</b></td>
+								<td><b>Fullname</b></td>
+								<td><b>Description</b></td>
+							</tr>
+							<tr>
+								<td ><a href="user.php?site=1&user=1">1</a></td>
+								<td >1</td>
+								<td >andresc</td>
+								<td ></td>
+								<td >team</td>
+								<td ></td>
+								<td >never</td>
+								<td >never</td>
+								<td >Yes</td>
+								<td >Yes</td>
+								<td >Andrés Cañón</td>
+								<td ></td>
+							</tr> <tr>
+								<td ><a href="user.php?site=1&user=2">2</a></td>
+								<td >1</td>
+								<td >carolb</td>
+								<td ></td>
+								<td >team</td>
+								<td ></td>
+								<td >never</td>
+								<td >never</td>
+								<td >Yes</td>
+								<td >Yes</td>
+								<td >Carol Becerra</td>
+								<td ></td>
+							</tr> <tr>
+								<td ><a href="user.php?site=1&user=3">3</a></td>
+								<td >1</td>
+								<td >germanc</td>
+								<td ></td>
+								<td >team</td>
+								<td ></td>
+								<td >never</td>
+								<td >never</td>
+								<td >Yes</td>
+								<td >Yes</td>
+								<td >Germán Cachope</td>
+								<td ></td>
+							</tr> <tr>
+								<td ><a href="user.php?site=1&user=4">4</a></td>
+								<td >1</td>
+								<td >test</td>
+								<td ></td>
+								<td >team</td>
+								<td ></td>
+								<td >never</td>
+								<td >never</td>
+								<td >Yes</td>
+								<td >Yes</td>
+								<td >Test User</td>
+								<td ></td>
+							</tr> <tr>
+								<td >1000</td>
+								<td >1</td>
+								<td >admin</td>
+								<td ></td>
+								<td >admin</td>
+								<td >192.168.0.5</td>
+								<td >14:45:04 EDT - 30/Sep/2018</td>
+								<td ><a href="javascript: conf2('user.php?logout=1&site=1&user=1000')">Force Logout</a></td>
+								<td >Yes</td>
+								<td >Yes</td>
+								<td >Administrator</td>
+								<td ></td>
 							</tr>
 						</table>
-					</center>
-					
-<!--De esta sección se retira código JavaScript y se porta hacia el archivo main.js a fin de mantener separado el código JS de los documentos HTML-->
-
-					<center>
-						<input class="btn btn-primary" type="submit" name="Submit" value="Import" onClick="conf()">
-						<input class="btn btn-dark" type="reset" name="Submit2" value="Clear">
-					</center>
-				</form>
-
-				<br><br>
-				<div class="container">
-				<div class="row justify-content-md-center" id="user-info-2">
-					<b>To create/edit one user, enter the data below.<br>
-						Note that any changes will overwrite the already defined data.<br>
-						(Specially care if you use a user number that is already existent.)<br>
-					</b>
 					</div><!--div.row-->
-</div><!--div.container-->
-					<table border="0">
+				</div><!--div.container-->
+
+
+				<div class="container">
+					<div class="row justify-content-md-center" id="user-info-1">	
+						<br><br><b>Clicking on a user number will bring the user data for edition.<br>
+							To import the users, just fill in the import file field.<br>
+						The file must be in the format defined in the admin's manual.</b>
+					</div><!--div.row-->
+				</div><!--div.container-->
+				<br>
+
+				<div class="container">
+					<div class="row justify-content-md-center formularios">	
+						<form name="form1" enctype="multipart/form-data" method="post" action="user.php">
+
+							<input type=hidden name="confirmation" value="noconfirm" />
+
+							<div class="form-group">
+								<label for="importfile"><strong>Import file:</strong></label>
+								<input type="file" class="form-control-file" id="importfile" name="importfile" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+							</div>
+
+							<!--De esta sección se retira código JavaScript y se porta hacia el archivo main.js a fin de mantener separado el código JS de los documentos HTML-->
+
+							<input class="btn btn-primary" type="submit" name="Submit" value="Import" onClick="conf()">
+							<input class="btn btn-dark" type="reset" name="Submit2" value="Clear">
+						</form>
+					</div><!--div.row-->
+				</div><!--div.container-->
+
+
+				<br>
+				<div class="container">
+					<div class="row justify-content-md-center" id="user-info-2">
+						<b>To create/edit one user, enter the data below.<br>
+							Note that any changes will overwrite the already defined data.<br>
+							(Specially care if you use a user number that is already existent.)<br>
+						</b>
+					</div><!--div.row-->
+				</div><!--div.container-->
+				<br>
+				<div class="container">
+					<div class="row justify-content-md-center formularios">	
 						<form name="form3" action="user.php" method="post">
 							<input type=hidden name="confirmation" value="noconfirm" />
-<!--De esta sección se retira código JavaScript y se porta hacia el archivo main.js a fin de mantener separado el código JS de los documentos HTML-->
-							
-								
-
-							<center>
-								<table border="0">
-									<tr> 
-										<td width="35%" align=right>User Site Number:</td>
-										<td width="65%">
-											<input type="number" name="usersitenumber" value="1" size="20" maxlength="20" />
-										</td>
-									</tr>
-									<tr> 
-										<td width="35%" align=right>User Number:</td>
-										<td width="65%">
-											<input type="text" name="usernumber" value="" size="20" maxlength="20" />
-										</td>
-									</tr>
-									<tr> 
-										<td width="35%" align=right>Username:</td>
-										<td width="65%">
-											<input type="text" name="username" value="" size="20" maxlength="20" />
-										</td>
-									</tr>
-									<tr> 
-										<td width="35%" align=right>ICPC ID:</td>
-										<td width="65%">
-											<input type="text" name="usericpcid" value="" size="20" maxlength="50" />
-										</td>
-									</tr>
-									<tr> 
-										<td width="35%" align=right>Type:</td>
-										<td width="65%">
-											<select name="usertype">
-												<option selected value="team">Team</option>
-												<option  value="judge">Judge</option>
-												<option  value="admin">Admin</option>
-												<option  value="staff">Staff</option>
-												<option  value="score">Score</option>
-												<option  value="site">Site</option>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td width="35%" align=right>Enabled:</td>
-										<td width="65%">
-											<select name="userenabled">
-												<option selected value="t">Yes</option>
-												<option  value="f">No</option>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td width="35%" align=right>MultiLogins (local teams should be set to <b>No</b>):</td>
-										<td width="65%">
-											<select name="usermultilogin">
-												<option  value="t">Yes</option>
-												<option selected value="f">No</option>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td width="35%" align=right>User Full Name:</td>
-										<td width="65%">
-											<input type="text" name="userfullname" value="" size="50" maxlength="200" />
-										</td>
-									</tr>
-									<tr> 
-										<td width="35%" align=right>User Description:</td>
-										<td width="65%">
-											<input type="text" name="userdesc" value="" size="50" maxlength="300" />
-										</td>
-									</tr>
-									<tr> 
-										<td width="35%" align=right>User IP:</td>
-										<td width="65%">
-											<input type="text" name="userip" value="" size="20" maxlength="20" />
-										</td>
-									</tr>
-									<tr> 
-										<td width="35%" align=right>Password:</td>
-										<td width="65%">
-											<input type="password" name="passwordn1" value="" size="20" maxlength="200" />
-										</td>
-									</tr>
-									<tr> 
-										<td width="35%" align=right>Retype Password:</td>
-										<td width="65%">
-											<input type="password" name="passwordn2" value="" size="20" maxlength="200" />
-										</td>
-									</tr>
-									<tr> 
-										<td width="35%" align=right>Allow password change:</td>
-										<td width="65%">
-											<select name="changepass">
-												<option  value="t">Yes</option>
-												<option selected value="f">No</option>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td width="35%" align=right>Admin (this user) Password:</td>
-										<td width="65%">
-											<input type="password" name="passwordo" value="" size="20" maxlength="200" />
-										</td>
-									</tr>
-								</table>
-							</center>
-							<center>
-								<input type="submit" name="Submit" value="Send" onClick="conf3()" class="btn btn-primary">
-								<input type="submit" name="Cancel" value="Cancel" onClick="conf5()" class="btn btn-dark">
-							</center>
+							<!--De esta sección se retira código JavaScript y se porta hacia el archivo main.js a fin de mantener separado el código JS de los documentos HTML-->
+							<!-- *************** -->
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="usersitenumber"><strong>User Site Number:</strong></label>
+									<input type="number" class="form-control" id="usersitenumber" name="usersitenumber" value="1"  required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="usernumber"><strong>User Number:</strong></label>
+									<input type="number" class="form-control" id="usernumber" name="usernumber" placeholder="User Number" required>
+								</div>
+							</div>
+							<!-- *************** -->
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="username"><strong>Username:</strong></label>
+									<input type="text" class="form-control" id="username" name="username" maxlength="20" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="usericpcid"><strong>ICPC ID:</strong></label>
+									<input type="number" class="form-control" id="usericpcid" name="usericpcid" placeholder="ICPC ID:" required>
+								</div>
+							</div>
+							<!-- *************** -->
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="userfullname"><strong>User Full Name:</strong></label>
+									<input type="text" class="form-control" id="userfullname" name="userfullname" maxlength="200" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="userip"><strong>User IP:</strong></label>
+									<input type="text" class="form-control" id="userip" name="userip" placeholder="User IP" required>
+								</div>
+							</div>
+							<!-- *************** -->
+							<div class="form-group">
+								<label for="usertype"><strong>User Description:</strong></label>
+								<input type="text" class="form-control" id="usertype" name="usertype" placeholder="User Description...">
+							</div>
+							<!-- *************** -->
+							<div class="form-row">
+								<div class="form-group col-md-7">
+									<label for="usermultilogin"><strong>MultiLogins (local teams should be set to <em>No</em>):</strong></label>
+									<select class="form-control" id="usermultilogin" name="usermultilogin">
+										<option  value="t">Yes</option>
+										<option selected value="f">No</option>
+									</select>
+								</div>
+								<div class="form-group col-md-3">
+									<label for="usertype"><strong>Type:</strong></label>
+									<select class="form-control" id="usertype" name="usertype">
+										<option selected value="team">Team</option>
+										<option  value="judge">Judge</option>
+										<option  value="admin">Admin</option>
+										<option  value="staff">Staff</option>
+										<option  value="score">Score</option>
+										<option  value="site">Site</option>
+									</select>
+								</div>
+								<div class="form-group col-md-2">
+									<label for="userenable"><strong>Enable:</strong></label>
+									<select class="form-control" id="userenable" name="userenable">
+										<option selected value="t">Yes</option>
+										<option  value="f">No</option>
+									</select>
+								</div>
+							</div>
+							<!-- *************** -->
+							<div class="form-row">
+								<div class="form-group col-md-4">
+									<label for="passwordn1"><strong>Password:</strong></label>
+									<input type="password" class="form-control" id="passwordn1" name="passwordn1" maxlength="200" required>
+								</div>
+								<div class="form-group col-md-4">
+									<label for="passwordn2"><strong>Retype Password:</strong></label>
+									<input type="password" class="form-control" id="passwordn2" name="passwordn2" required>
+								</div>
+								<div class="form-group col-md-4">
+									<label for="changepass"><strong>Allow password change:</strong></label>
+									<select class="form-control" id="changepass" name="changepass">
+										<option  value="t">Yes</option>
+										<option selected value="f">No</option>
+									</select>
+								</div>
+							</div>
+							<!-- *************** -->
+							<div class="form-group">
+								<label for="passwordo"><strong>Admin (this user) Password:</strong></label>
+								<input type="password" class="form-control" id="passwordo" name="passwordo">
+							</div>
+							<!-- *************** --> 
+							<input type="submit" name="Submit" value="Send" onClick="conf3()" class="btn btn-primary">
+							<input type="submit" name="Cancel" value="Cancel" onClick="conf5()" class="btn btn-dark">
 						</form>
-					</div>
-				</div>
+
+
+					</div><!--div.row-->
+				</div><!--div.container-->
+				<!-- ----------------------- End form ----------------------- -->
+
+			</div>
+		</div>
 		<div class="row" id="footer">
 			<p>Powered by BOCA boca-1.5.13. Copyright (c) 2003-2017 BOCA System (bocasystem@gmail.com). All rights reserved.</p>
 		</div>
