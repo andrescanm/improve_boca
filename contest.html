@@ -29,30 +29,164 @@
 		</div>
 		<!--Se remplaza el esquema de maquetación con tablas del codigo original y se usará en su lugar el elemento nav de Bootstrap-->
 		<!--Los elementos <td> originales tienen un class=menu en esta instancia será retirado este atributo y en posteriores entregas se validará si realmente es necesario por funcionalidad-->
-		<div class="row">
-			<div class="col-3" id="menu">
-				<ul class="nav flex-column"">
-					<li class="nav-item"><a class="nav-link" href="run.html">Runs</a></li>
-					<li class="nav-item"><a class="nav-link" href="score.html">Score</a></li>
-					<li class="nav-item"><a class="nav-link" href="clar.html">Clarifications</a></li>
-					<li class="nav-item"><a class="nav-link" href="user.html">Users</a></li>
-					<li class="nav-item"><a class="nav-link" href="problem.html">Problems</a></li>
-					<li class="nav-item"><a class="nav-link" href="language.html">Languages</a></li>
-					<li class="nav-item"><a class="nav-link" href="answer.html">Answers</a></li>
-					<li class="nav-item"><a class="nav-link" href="misc.html">Misc</a></li>
-					<li class="nav-item"><a class="nav-link" href="task.html">Tasks</a></li>
-					<li class="nav-item"><a class="nav-link" href="site.html">Site</a></li>
-					<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
-					<li class="nav-item"><a class="nav-link" href="log.html">Logs</a></li>
-					<li class="nav-item"><a class="nav-link" href="report.html">Reports</a></li>
-					<li class="nav-item"><a class="nav-link" href="files.html">Backups</a></li>
-					<li class="nav-item"><a class="nav-link" href="option.html">Options</a></li>
-					<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
-				</ul>
-			</div>
-			<div class="col-9"">
-				<h2>Contenido de la p&aacute;gina</h2>
-			</div>
+			<div class="row">
+				<div class="col-3" id="menu">
+					<ul class="nav flex-column"">
+						<li class="nav-item"><a class="nav-link" href="run.html">Runs</a></li>
+						<li class="nav-item"><a class="nav-link" href="score.html">Score</a></li>
+						<li class="nav-item"><a class="nav-link" href="clar.html">Clarifications</a></li>
+						<li class="nav-item"><a class="nav-link" href="user.html">Users</a></li>
+						<li class="nav-item"><a class="nav-link" href="problem.html">Problems</a></li>
+						<li class="nav-item"><a class="nav-link" href="language.html">Languages</a></li>
+						<li class="nav-item"><a class="nav-link" href="answer.html">Answers</a></li>
+						<li class="nav-item"><a class="nav-link" href="misc.html">Misc</a></li>
+						<li class="nav-item"><a class="nav-link" href="task.html">Tasks</a></li>
+						<li class="nav-item"><a class="nav-link" href="site.html">Site</a></li>
+						<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
+						<li class="nav-item"><a class="nav-link" href="log.html">Logs</a></li>
+						<li class="nav-item"><a class="nav-link" href="report.html">Reports</a></li>
+						<li class="nav-item"><a class="nav-link" href="files.html">Backups</a></li>
+						<li class="nav-item"><a class="nav-link" href="option.html">Options</a></li>
+						<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
+					</ul>
+				</div>
+				<!-- *************************************************************************************************** -->
+				<div class="col-9""><!-- div contenido -->
+					<!-- *************************************************************************************************** -->
+					<form name="form1" enctype="multipart/form-data" method="post" action="contest.php">
+						<input type=hidden name="confirmation" value="noconfirm" />
+						<script language="javascript">
+							function conf() {
+								if (confirm("Confirm?")) {
+									document.form1.confirmation.value='confirm';
+								}
+							}
+							function conf2() {
+								if (confirm("This will restart all start/stop related information in all the sites.\n\
+									If you have a contest running, the result is unpredictable. Are you really sure?")) {
+									document.form1.confirmation.value='confirm';
+							}
+						}
+						function conf3() {
+							if (confirm("This will make your site become the main site, that is, this site will\n\
+								play an active position in the contest regarding the information\n\
+								flow. ARE YOU SURE?")) {
+								document.form1.confirmation.value='confirm';
+						}
+					}
+				</script>
+				<br><br>
+				<center>
+					<table border="0">
+						<tr>
+							<td width="35%" align=right>Contest number:</td>
+							<td width="65%">
+							1        </td>
+						</tr>
+						<tr>
+							<td width="35%" align=right>Name:</td>
+							<td width="65%">
+								<input type="text"  name="name" value="Contest1" size="50" maxlength="50" />
+							</td>
+						</tr>
+						<tr>
+							<td width="35%" align=right>Start date:</td>
+							<td width="65%"> hh:mm
+								<input type="text"  name="startdateh" value="23" size="2" maxlength="2" />
+								:
+								<input type="text"  name="startdatemin" value="40" size="2" maxlength="2" />
+								&nbsp; &nbsp; dd/mm/yyyy
+								<input type="text"  name="startdated" value="26" size="2" maxlength="2" />
+								/
+								<input type="text"  name="startdatem" value="09" size="2" maxlength="2" />
+								/
+								<input type="text"  name="startdatey" value="2018" size="4" maxlength="4" />
+							</td>
+						</tr>
+						<tr>
+							<td width="35%" align=right>Duration (in minutes):</td>
+							<td width="65%">
+								<input type="text" name="duration"  value="300" size="20" maxlength="20" />
+							</td>
+						</tr>
+						<tr>
+							<td width="35%" align=right>Stop answering (in minutes):</td>
+							<td width="65%">
+								<input type="text" name="lastmileanswer"  value="285" size="20" maxlength="20" />
+							</td>
+						</tr>
+						<tr>
+							<td width="35%" align=right>Stop scoreboard (in minutes):</td>
+							<td width="65%">
+								<input type="text" name="lastmilescore"  value="240" size="20" maxlength="20" />
+							</td>
+						</tr>
+						<tr>
+							<td width="35%" align=right>Penalty (in minutes):</td>
+							<td width="65%">
+								<input type="text" name="penalty"  value="20" size="20" maxlength="20" />
+							</td>
+						</tr>
+						<tr>
+							<td width="35%" align=right>Max file size allowed for teams (in KB):</td>
+							<td width="65%">
+								<input type="text" name="maxfilesize"  
+								value="100" size="20" maxlength="20" />
+							</td>
+						</tr>
+						<tr><td width="35%" align=right>
+						Your PHP config. allows at most:</td>
+						<td width="65%">
+						128MB(max. post) and 128MB(max. filesize)  </td></tr>
+						<tr><td width="35%" align=right></td>
+							<td width="65%">
+							1440s of session expiration and 0 as cookie lifetime (0 means unlimited)  </td></tr>
+							<tr>
+								<td width="35%" align=right>Main site URL (IP/bocafolder):</td>
+								<td width="65%">
+									<input type="text" name="mainsiteurl" value="" size="40" maxlength="200" />
+								</td>
+							</tr>
+							<tr>
+								<td width="35%" align=right>Unlock password (only use it within a <b>secure network</b>):</td>
+								<td width="65%">
+									<input type="password" name="unlockkey" value="" size="40" maxlength="200" />
+								</td>
+							</tr>
+							<tr>
+								<td width="35%" align=right>Keys (only use it within a <b>secure network</b>):</td>
+								<td width="65%">
+									<input type="file" name="keyfile" size="40">
+								</td>
+							</tr>
+							<tr>
+								<td width="35%" align=right>Contest main site number:</td>
+								<td width="65%">
+									<input type="number" name="mainsite"  value="1" size="4" maxlength="4" />
+								</td>
+							</tr>
+							<tr>
+								<td width="35%" align=right>Contest local site number:</td>
+								<td width="65%">
+									<input type="number" name="localsite"  value="1" size="4" maxlength="4" />
+								</td>
+							</tr>
+						</table>
+					</center>
+					<center>
+						<input type="submit" class="btn btn-info" name="Submit3" value="Update" onClick="conf()">
+						<input type="submit" name="Submit3" class="btn btn-secondary" value="Update Contest and All Sites" onClick="conf2()">
+						<input type="reset" name="Submit4" class="btn btn-dark" value="Clear">
+						<br><br>
+						<input type="submit" class="btn btn-danger" name="SubmitDC" value="Delete ALL clars" onClick="conf2()">
+						<input type="submit" class="btn btn-danger" name="SubmitDR" value="Delete ALL runs" onClick="conf2()">
+						<input type="submit" class="btn btn-danger" name="SubmitDT" value="Delete ALL tasks" onClick="conf2()">
+						<input type="submit" class="btn btn-danger" name="SubmitDB" value="Delete ALL bkps" onClick="conf2()">
+					</center>
+				</form>
+				<!-- *************************************************************************************************** -->
+			</div><!-- End div contenido -->
+			<!-- *************************************************************************************************** -->
 		</div>
 		<div class="row" id="footer">
 			<p>Powered by BOCA boca-1.5.13. Copyright (c) 2003-2017 BOCA System (bocasystem@gmail.com). All rights reserved.</p>

@@ -29,43 +29,62 @@
 		</div>
 		<!--Se remplaza el esquema de maquetación con tablas del codigo original y se usará en su lugar el elemento nav de Bootstrap-->
 		<!--Los elementos <td> originales tienen un class=menu en esta instancia será retirado este atributo y en posteriores entregas se validará si realmente es necesario por funcionalidad-->
-		<div class="row">
-			<div class="col-3" id="menu">
-				<ul class="nav flex-column"">
-					<li class="nav-item"><a class="nav-link" href="run.html">Runs</a></li>
-					<li class="nav-item"><a class="nav-link" href="score.html">Score</a></li>
-					<li class="nav-item"><a class="nav-link" href="clar.html">Clarifications</a></li>
-					<li class="nav-item"><a class="nav-link" href="user.html">Users</a></li>
-					<li class="nav-item"><a class="nav-link" href="problem.html">Problems</a></li>
-					<li class="nav-item"><a class="nav-link" href="language.html">Languages</a></li>
-					<li class="nav-item"><a class="nav-link" href="answer.html">Answers</a></li>
-					<li class="nav-item"><a class="nav-link" href="misc.html">Misc</a></li>
-					<li class="nav-item"><a class="nav-link" href="task.html">Tasks</a></li>
-					<li class="nav-item"><a class="nav-link" href="site.html">Site</a></li>
-					<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
-					<li class="nav-item"><a class="nav-link" href="log.html">Logs</a></li>
-					<li class="nav-item"><a class="nav-link" href="report.html">Reports</a></li>
-					<li class="nav-item"><a class="nav-link" href="files.html">Backups</a></li>
-					<li class="nav-item"><a class="nav-link" href="option.html">Options</a></li>
-					<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
-				</ul>
+			<div class="row">
+				<div class="col-3" id="menu">
+					<ul class="nav flex-column"">
+						<li class="nav-item"><a class="nav-link" href="run.html">Runs</a></li>
+						<li class="nav-item"><a class="nav-link" href="score.html">Score</a></li>
+						<li class="nav-item"><a class="nav-link" href="clar.html">Clarifications</a></li>
+						<li class="nav-item"><a class="nav-link" href="user.html">Users</a></li>
+						<li class="nav-item"><a class="nav-link" href="problem.html">Problems</a></li>
+						<li class="nav-item"><a class="nav-link" href="language.html">Languages</a></li>
+						<li class="nav-item"><a class="nav-link" href="answer.html">Answers</a></li>
+						<li class="nav-item"><a class="nav-link" href="misc.html">Misc</a></li>
+						<li class="nav-item"><a class="nav-link" href="task.html">Tasks</a></li>
+						<li class="nav-item"><a class="nav-link" href="site.html">Site</a></li>
+						<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
+						<li class="nav-item"><a class="nav-link" href="log.html">Logs</a></li>
+						<li class="nav-item"><a class="nav-link" href="report.html">Reports</a></li>
+						<li class="nav-item"><a class="nav-link" href="files.html">Backups</a></li>
+						<li class="nav-item"><a class="nav-link" href="option.html">Options</a></li>
+						<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
+					</ul>
+				</div>
+				<!-- *************************************************************************************************** -->
+				<div class="col-9""><!-- div contenido -->
+					<!-- *************************************************************************************************** -->
+					<div class="container">
+						<div class="row justify-content-md-center">
+							<a class="btn btn-info btn-report" href="#" class=menu onClick="window.open('report/score.php?p=2', 'Complete Scoreboard','width=800,height=600,scrollbars=yes,toolbar=yes,menubar=yes,resizable=yes')">Scoreboard</a><br />
+							<a class="btn btn-info btn-report" href="#" class=menu onClick="window.open('report/score.php?p=0', 'Complete Scoreboard','width=800,height=600,scrollbars=yes,toolbar=yes,menubar=yes,resizable=yes')">Detailed Scoreboard</a><br />
+							<a class="btn btn-info btn-report" href="#" class=menu onClick="window.open('report/score.php?p=0&hor=0', 'Complete Scoreboard','width=800,height=600,scrollbars=yes,toolbar=yes,menubar=yes,resizable=yes')">Interactive Scoreboard</a><br />
+							<a class="btn btn-info btn-report" href="#" class=menu onClick="window.open('report/score.php?p=1', 'Public Scoreboard','width=800,height=600,scrollbars=yes,toolbar=yes,menubar=yes,resizable=yes')">Delayed Scoreboard</a><br />
+							<a class="btn btn-info btn-report" href="#" class=menu onClick="window.open('report/run.php', 'Run List','width=800,height=600,scrollbars=yes,toolbar=yes,menubar=yes,resizable=yes')">Run List</a><br />
+							<a class="btn btn-info btn-report" href="#" class=menu onClick="window.open('report/clar.php', 'Clarification List','width=800,height=600,scrollbars=yes,toolbar=yes,menubar=yes,resizable=yes')">Clarification List</a><br />
+							<a class="btn btn-info btn-report" href="#" class=menu onClick="window.open('report/task.php', 'Task List','width=800,height=600,scrollbars=yes,toolbar=yes,menubar=yes,resizable=yes')">Task List</a><br />
+							<a class="btn btn-info btn-report" href="#" class=menu onClick="window.open('report/site.php', 'Start/Stop Logs','width=800,height=600,scrollbars=yes,toolbar=yes,menubar=yes,resizable=yes')">Site Start/Stop Logs</a><br />
+							<a class="btn btn-info btn-report" href="#" class=menu onClick="window.open('report/icpc.php', 'ICPC File','width=800,height=600,scrollbars=yes,toolbar=yes,menubar=yes,resizable=yes')">ICPC File</a><br />
+							<a class="btn btn-info btn-report" href="#" class=menu onClick="window.open('report/webcast.php', 'Webcast File','width=800,height=600,scrollbars=yes,toolbar=yes,menubar=yes,resizable=yes')">Webcast File</a><br />
+							<a class="btn btn-info btn-report" href="#" class=menu onClick="window.open('report/s4ris.php', 'S4ris File','width=800,height=600,scrollbars=yes,toolbar=yes,menubar=yes,resizable=yes')">S4RiS File</a><br />
+							<a class="btn btn-info btn-report" href="#" class=menu onClick="window.open('report/stat.php', 'Problem Statistics','width=800,height=600,scrollbars=yes,toolbar=yes,menubar=yes,resizable=yes')">Statistics</a><br />
+						</div>
+					</div>
+						<!-- *************************************************************************************************** -->
+					</div><!-- End div contenido -->
+					<!-- *************************************************************************************************** -->
+				</div>
+				<div class="row" id="footer">
+					<p>Powered by BOCA boca-1.5.13. Copyright (c) 2003-2017 BOCA System (bocasystem@gmail.com). All rights reserved.</p>
+				</div>
 			</div>
-			<div class="col-9"">
-				<h2>Contenido de la p&aacute;gina</h2>
-			</div>
-		</div>
-		<div class="row" id="footer">
-			<p>Powered by BOCA boca-1.5.13. Copyright (c) 2003-2017 BOCA System (bocasystem@gmail.com). All rights reserved.</p>
-		</div>
-	</div>
-	<!--JS de Bootstrap-->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	<!------------------------------------------------------------>
-	<!--JavaScript: Se omite el atributo type="text/javascript" ya que en HTML5 no es necesario pues JavaScript es el lenguaje de Scripting por default-->
-	<!--De momento se mantiene el código JS provisto en el código original-->
-	<script src="js/main.js"></script>
-	<!------------------------------------------------------------>
-</body>
-</html>
+			<!--JS de Bootstrap-->
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+			<!------------------------------------------------------------>
+			<!--JavaScript: Se omite el atributo type="text/javascript" ya que en HTML5 no es necesario pues JavaScript es el lenguaje de Scripting por default-->
+			<!--De momento se mantiene el código JS provisto en el código original-->
+			<script src="js/main.js"></script>
+			<!------------------------------------------------------------>
+		</body>
+		</html>

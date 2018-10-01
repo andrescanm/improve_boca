@@ -50,9 +50,35 @@
 					<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
 				</ul>
 			</div>
-			<div class="col-9"">
-				<h2>Contenido de la p&aacute;gina</h2>
-			</div>
+			<!-- *************************************************************************************************** -->
+			<div class="col-9""><!-- div contenido -->
+			<!-- *************************************************************************************************** -->
+				<form name="form1" enctype="multipart/form-data" method="get" action="misc.php">
+  <input type=hidden name="confirmation" value="noconfirm" />
+   <div class="container">
+   	<div class="row">
+   <input type="submit" class="btn btn-info" name="Submit1" value="Transfer" onClick="conf()"> &nbsp;
+   <input type="submit" class="btn btn-info" name="Submit2" value="Transfer all" onClick="conf()"> &nbsp;
+   <input type="submit" class="btn btn-info" name="Submit3" value="Transfer scores"> &nbsp;
+   <input type="submit" class="btn btn-info" name="Submit4" value="Clear cache" onClick="conf()"> &nbsp; 
+   </div><br>
+   <div class="row">
+   <input type="submit" class="btn btn-info" name="Submit5" value="Full clear" onClick="conf2()">  &nbsp;
+   <input type="submit" class="btn btn-info" name="Submit6" value="Update BOCA" onClick="conf2()">  &nbsp;
+   <input type="submit" class="btn btn-info" name="Submit7" value="Revert Update" onClick="conf2()"> 
+   </div>
+  </div>
+</form>
+<br>
+<pre class="mensajes-boca">
+OPERATION LOG DISPLAYS BELOW:
+
+Start: 22:41:40 EDT - 30/Sep/2018
+End: 22:41:40 EDT - 30/Sep/2018
+</pre>
+			<!-- *************************************************************************************************** -->
+			</div><!-- End div contenido -->
+			<!-- *************************************************************************************************** -->
 		</div>
 		<div class="row" id="footer">
 			<p>Powered by BOCA boca-1.5.13. Copyright (c) 2003-2017 BOCA System (bocasystem@gmail.com). All rights reserved.</p>

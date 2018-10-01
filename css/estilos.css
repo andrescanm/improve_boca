@@ -30,6 +30,23 @@
 .nowrap {
         white-space:nowrap;
     }
+
+.mensajes-boca {
+	padding: 15px;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #80deea;
+}
+
+.table {
+	margin-top: 2px;
+}
+
+.btn-report {
+	margin: 2px;
+}
+
 /*--------------------------------*/
 
 /*--------------------------------*/
@@ -120,8 +137,4 @@
 	padding: 15px;
 	border: solid 1px #ccc;
 	border-radius: 5px;
-}
-
-.table-users {
-	margin-top: 2px;
 }

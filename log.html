@@ -29,43 +29,245 @@
 		</div>
 		<!--Se remplaza el esquema de maquetación con tablas del codigo original y se usará en su lugar el elemento nav de Bootstrap-->
 		<!--Los elementos <td> originales tienen un class=menu en esta instancia será retirado este atributo y en posteriores entregas se validará si realmente es necesario por funcionalidad-->
-		<div class="row">
-			<div class="col-3" id="menu">
-				<ul class="nav flex-column"">
-					<li class="nav-item"><a class="nav-link" href="run.html">Runs</a></li>
-					<li class="nav-item"><a class="nav-link" href="score.html">Score</a></li>
-					<li class="nav-item"><a class="nav-link" href="clar.html">Clarifications</a></li>
-					<li class="nav-item"><a class="nav-link" href="user.html">Users</a></li>
-					<li class="nav-item"><a class="nav-link" href="problem.html">Problems</a></li>
-					<li class="nav-item"><a class="nav-link" href="language.html">Languages</a></li>
-					<li class="nav-item"><a class="nav-link" href="answer.html">Answers</a></li>
-					<li class="nav-item"><a class="nav-link" href="misc.html">Misc</a></li>
-					<li class="nav-item"><a class="nav-link" href="task.html">Tasks</a></li>
-					<li class="nav-item"><a class="nav-link" href="site.html">Site</a></li>
-					<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
-					<li class="nav-item"><a class="nav-link" href="log.html">Logs</a></li>
-					<li class="nav-item"><a class="nav-link" href="report.html">Reports</a></li>
-					<li class="nav-item"><a class="nav-link" href="files.html">Backups</a></li>
-					<li class="nav-item"><a class="nav-link" href="option.html">Options</a></li>
-					<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
-				</ul>
+			<div class="row">
+				<div class="col-3" id="menu">
+					<ul class="nav flex-column"">
+						<li class="nav-item"><a class="nav-link" href="run.html">Runs</a></li>
+						<li class="nav-item"><a class="nav-link" href="score.html">Score</a></li>
+						<li class="nav-item"><a class="nav-link" href="clar.html">Clarifications</a></li>
+						<li class="nav-item"><a class="nav-link" href="user.html">Users</a></li>
+						<li class="nav-item"><a class="nav-link" href="problem.html">Problems</a></li>
+						<li class="nav-item"><a class="nav-link" href="language.html">Languages</a></li>
+						<li class="nav-item"><a class="nav-link" href="answer.html">Answers</a></li>
+						<li class="nav-item"><a class="nav-link" href="misc.html">Misc</a></li>
+						<li class="nav-item"><a class="nav-link" href="task.html">Tasks</a></li>
+						<li class="nav-item"><a class="nav-link" href="site.html">Site</a></li>
+						<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
+						<li class="nav-item"><a class="nav-link" href="log.html">Logs</a></li>
+						<li class="nav-item"><a class="nav-link" href="report.html">Reports</a></li>
+						<li class="nav-item"><a class="nav-link" href="files.html">Backups</a></li>
+						<li class="nav-item"><a class="nav-link" href="option.html">Options</a></li>
+						<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
+					</ul>
+				</div>
+				<!-- *************************************************************************************************** -->
+				<div class="col-9""><!-- div contenido -->
+					<!-- *************************************************************************************************** -->
+					<table class="table table-striped table-responsive">
+						<tr>
+							<td><b><a href="log.php?order=site&limit=50">Site</a></b></td>
+							<td nowrap><b><a href="log.php?order=user&limit=50">User #</a></b></td>
+							<td><b><a href="log.php?order=ip&limit=50">IP</a></b></td>
+							<td><b><a href="log.php?order=type&limit=50">Type</a></b></td>
+							<td><b>Date</b></td>
+							<td><b>Description</b></td>
+							<td><b>Status</b></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>22:23:10 EDT - 30/Sep/2018</td>
+							<td nowrap>User admin authenticated (192.168.0.5)</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>22:23:08 EDT - 30/Sep/2018</td>
+							<td nowrap>User 1000 (contest=1,site=1) logged out.</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>21:27:30 EDT - 30/Sep/2018</td>
+							<td nowrap>User admin authenticated (192.168.0.5)</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>14:45:04 EDT - 30/Sep/2018</td>
+							<td nowrap>User admin authenticated (192.168.0.5)</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>13:56:29 EDT - 30/Sep/2018</td>
+							<td nowrap>User 1000 (contest=1,site=1) logged out.</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>13:27:49 EDT - 30/Sep/2018</td>
+							<td nowrap>User 4 (username=test,site=1,contest=1) updated.</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>12:59:44 EDT - 30/Sep/2018</td>
+							<td nowrap>User admin authenticated (192.168.0.5)</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>12:57:13 EDT - 30/Sep/2018</td>
+							<td nowrap>User 1000 (contest=1,site=1) logged out.</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>12:47:19 EDT - 30/Sep/2018</td>
+							<td nowrap>User 4 (username=pepitop,site=1,contest=1) updated.</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>12:45:51 EDT - 30/Sep/2018</td>
+							<td nowrap>User 4 (site=1,contest=1) included.</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>12:45:14 EDT - 30/Sep/2018</td>
+							<td nowrap>User 3 (site=1,contest=1) included.</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>12:44:27 EDT - 30/Sep/2018</td>
+							<td nowrap>User 2 (site=1,contest=1) included.</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>12:43:19 EDT - 30/Sep/2018</td>
+							<td nowrap>User 1 (site=1,contest=1) included.</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>12:41:03 EDT - 30/Sep/2018</td>
+							<td nowrap>User admin authenticated (192.168.0.5)</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>12:58:51 EDT - 29/Sep/2018</td>
+							<td nowrap>User admin authenticated (192.168.0.5)</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>12:23:50 EDT - 29/Sep/2018</td>
+							<td nowrap>User admin authenticated (192.168.0.5)</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>11:43:49 EDT - 29/Sep/2018</td>
+							<td nowrap>User 1000 (contest=1,site=1) logged out.</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=warn&limit=50">warn</a></td>
+							<td nowrap>11:43:05 EDT - 29/Sep/2018</td>
+							<td nowrap>User admin is using two different IPs: 127.0.0.1(11:37:12 EDT - 29/Sep/2018) and 192.168.0.5</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=192.168.0.5&limit=50">192.168.0.5</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>11:43:05 EDT - 29/Sep/2018</td>
+							<td nowrap>User admin authenticated (192.168.0.5)</td>
+							<td nowrap></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="log.php?site=1&limit=50">1</a></td>
+							<td nowrap><a href="log.php?user=1000&limit=50">1000</a></td>
+							<td nowrap><a href="log.php?ip=127.0.0.1&limit=50">127.0.0.1</a></td>
+							<td nowrap><a href="log.php?type=info&limit=50">info</a></td>
+							<td nowrap>11:37:12 EDT - 29/Sep/2018</td>
+							<td nowrap>User admin authenticated (127.0.0.1)</td>
+							<td nowrap></td>
+						</tr>
+					</table>
+					<br>
+					<div class="container">
+						<div class="row justify-content-md-center">
+							<a href="log.php?limit=50&order=&user=&site=&type=&ip="> |50| </a>
+							<a href="log.php?limit=200&order=&user=&site=&type=&ip="> 200| </a>
+							<a href="log.php?limit=1000&order=&user=&site=&type=&ip="> 1000| </a>
+							<a href="log.php?limit=1000000&order=&user=&site=&type=&ip="> no limit|</a></div>
+						</div>
+						<!-- *************************************************************************************************** -->
+					</div><!-- End div contenido -->
+					<!-- *************************************************************************************************** -->
+				</div>
+				<div class="row" id="footer">
+					<p>Powered by BOCA boca-1.5.13. Copyright (c) 2003-2017 BOCA System (bocasystem@gmail.com). All rights reserved.</p>
+				</div>
 			</div>
-			<div class="col-9"">
-				<h2>Contenido de la p&aacute;gina</h2>
-			</div>
-		</div>
-		<div class="row" id="footer">
-			<p>Powered by BOCA boca-1.5.13. Copyright (c) 2003-2017 BOCA System (bocasystem@gmail.com). All rights reserved.</p>
-		</div>
-	</div>
-	<!--JS de Bootstrap-->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	<!------------------------------------------------------------>
-	<!--JavaScript: Se omite el atributo type="text/javascript" ya que en HTML5 no es necesario pues JavaScript es el lenguaje de Scripting por default-->
-	<!--De momento se mantiene el código JS provisto en el código original-->
-	<script src="js/main.js"></script>
-	<!------------------------------------------------------------>
-</body>
-</html>
+			<!--JS de Bootstrap-->
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+			<!------------------------------------------------------------>
+			<!--JavaScript: Se omite el atributo type="text/javascript" ya que en HTML5 no es necesario pues JavaScript es el lenguaje de Scripting por default-->
+			<!--De momento se mantiene el código JS provisto en el código original-->
+			<script src="js/main.js"></script>
+			<!------------------------------------------------------------>
+		</body>
+		</html>

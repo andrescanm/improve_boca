@@ -29,30 +29,110 @@
 		</div>
 		<!--Se remplaza el esquema de maquetación con tablas del codigo original y se usará en su lugar el elemento nav de Bootstrap-->
 		<!--Los elementos <td> originales tienen un class=menu en esta instancia será retirado este atributo y en posteriores entregas se validará si realmente es necesario por funcionalidad-->
-		<div class="row">
-			<div class="col-3" id="menu">
-				<ul class="nav flex-column"">
-					<li class="nav-item"><a class="nav-link" href="run.html">Runs</a></li>
-					<li class="nav-item"><a class="nav-link" href="score.html">Score</a></li>
-					<li class="nav-item"><a class="nav-link" href="clar.html">Clarifications</a></li>
-					<li class="nav-item"><a class="nav-link" href="user.html">Users</a></li>
-					<li class="nav-item"><a class="nav-link" href="problem.html">Problems</a></li>
-					<li class="nav-item"><a class="nav-link" href="language.html">Languages</a></li>
-					<li class="nav-item"><a class="nav-link" href="answer.html">Answers</a></li>
-					<li class="nav-item"><a class="nav-link" href="misc.html">Misc</a></li>
-					<li class="nav-item"><a class="nav-link" href="task.html">Tasks</a></li>
-					<li class="nav-item"><a class="nav-link" href="site.html">Site</a></li>
-					<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
-					<li class="nav-item"><a class="nav-link" href="log.html">Logs</a></li>
-					<li class="nav-item"><a class="nav-link" href="report.html">Reports</a></li>
-					<li class="nav-item"><a class="nav-link" href="files.html">Backups</a></li>
-					<li class="nav-item"><a class="nav-link" href="option.html">Options</a></li>
-					<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
-				</ul>
-			</div>
-			<div class="col-9"">
-				<h2>Contenido de la p&aacute;gina</h2>
-			</div>
+			<div class="row">
+				<div class="col-3" id="menu">
+					<ul class="nav flex-column"">
+						<li class="nav-item"><a class="nav-link" href="run.html">Runs</a></li>
+						<li class="nav-item"><a class="nav-link" href="score.html">Score</a></li>
+						<li class="nav-item"><a class="nav-link" href="clar.html">Clarifications</a></li>
+						<li class="nav-item"><a class="nav-link" href="user.html">Users</a></li>
+						<li class="nav-item"><a class="nav-link" href="problem.html">Problems</a></li>
+						<li class="nav-item"><a class="nav-link" href="language.html">Languages</a></li>
+						<li class="nav-item"><a class="nav-link" href="answer.html">Answers</a></li>
+						<li class="nav-item"><a class="nav-link" href="misc.html">Misc</a></li>
+						<li class="nav-item"><a class="nav-link" href="task.html">Tasks</a></li>
+						<li class="nav-item"><a class="nav-link" href="site.html">Site</a></li>
+						<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
+						<li class="nav-item"><a class="nav-link" href="log.html">Logs</a></li>
+						<li class="nav-item"><a class="nav-link" href="report.html">Reports</a></li>
+						<li class="nav-item"><a class="nav-link" href="files.html">Backups</a></li>
+						<li class="nav-item"><a class="nav-link" href="option.html">Options</a></li>
+						<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
+					</ul>
+				</div>
+				<!-- ******************************************************************************************* -->
+				<div class="col-9""><!--div content-->
+					<!-- ******************************************************************************************* -->
+					<table class="table table-striped">
+						<tr>
+							<td><b>Language #</b></td>
+							<td><b>Name</b></td>
+							<td><b>Extension</b></td>
+						</tr>
+						<tr>
+							<td nowrap><a href="javascript: conf2('language.php?delete=1')">1</a></td>
+							<td nowrap>C</td>
+							<td nowrap>c</td>
+						</tr>
+						<tr>
+							<td nowrap><a href="javascript: conf2('language.php?delete=2')">2</a></td>
+							<td nowrap>C++11</td>
+							<td nowrap>cc</td>
+						</tr>
+						<tr>
+							<td nowrap><a href="javascript: conf2('language.php?delete=3')">3</a></td>
+							<td nowrap>Java</td>
+							<td nowrap>java</td>
+						</tr>
+						<tr>
+							<td nowrap><a href="javascript: conf2('language.php?delete=4')">4</a></td>
+							<td nowrap>Python2</td>
+							<td nowrap>py2</td>
+						</tr>
+						<tr>
+							<td nowrap><a href="javascript: conf2('language.php?delete=5')">5</a></td>
+							<td nowrap>Python3</td>
+							<td nowrap>py3</td>
+						</tr>
+					</table>
+					<br><br><div class="mensajes-boca"><b>Clicking on a language number will DELETE it.<br>
+						WARNING: deleting a language will remove EVERYTHING related to it.<br>
+						It is NOT recommended to change anything while the contest is running.<br>
+					</b></div>
+					<br>
+					<form name="form1" enctype="multipart/form-data" method="post" action="language.php">
+						<input type=hidden name="confirmation" value="noconfirm" />
+						<script language="javascript">
+							function conf() {
+								if (confirm("Confirm?")) {
+									document.form1.confirmation.value='confirm';
+								}
+							}
+						</script>
+						<center>
+							<div class="mensajes-boca"><b>To insert/edit a language, enter the data below.<br>
+							Note that any changes will overwrite the already defined data.</div><br><br>
+						</b>
+						<table border="0">
+							<tr>
+								<td width="35%" align=right>Number:</td>
+								<td width="65%">
+									<input type="number" name="langnumber" value="" size="20" maxlength="20" required />
+								</td>
+							</tr>
+							<tr>
+								<td width="35%" align=right>Name:</td>
+								<td width="65%">
+									<input type="text" name="langname" value="" size="20" maxlength="20" />
+								</td>
+							</tr>
+							<tr>
+								<td width="35%" align=right>Extension:</td>
+								<td width="65%">
+									<input type="text" name="langextension" value="" size="20" maxlength="20" />
+								</td>
+							</tr>
+						</table>
+					</center>
+					<center>
+						<input type="submit" name="Submit3" value="Send" onClick="conf()">
+						<input type="reset" name="Submit4" value="Clear">
+					</center>
+				</form>
+
+				<!-- ******************************************************************************************* -->
+			</div><!--End div content-->
+			<!-- ******************************************************************************************* -->
 		</div>
 		<div class="row" id="footer">
 			<p>Powered by BOCA boca-1.5.13. Copyright (c) 2003-2017 BOCA System (bocasystem@gmail.com). All rights reserved.</p>
