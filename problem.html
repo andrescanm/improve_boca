@@ -55,8 +55,6 @@
 					<!-- *************************************************************************************** -->
 					<div class="container">
 						<div class="row">
-							
-
 							<form name="form0" enctype="multipart/form-data" method="post" action="problem.php">
 								<table class="table table-striped">
 									<tr>
@@ -66,129 +64,97 @@
 										<td><b>Basename</b></td>
 										<td><b>Descfile</b></td>
 										<td><b>Package file</b></td>
-<!--  <td><b>Compare file</b></td>
-	<td><b>Timelimit</b></td>-->
-	<td><b>Color</b></td>
-</tr>
-<tr>
-	<td nowrap>0 (fake)</td>
-	<td nowrap>General</td>
-	<td nowrap>&nbsp;</td>
-	<td nowrap>&nbsp;</td>
-	<td>&nbsp;</td>
-	<td nowrap>&nbsp;</td>
-	<td nowrap>&nbsp;</td>
-</tr>
-</table></form>
-</div><!--div.container-->
-</div><!--div.row-->
-<div class="container">
-	<div class="row">
-		<br>
-		<div class="mensajes-boca"><b>Clicking on a problem number will delete it.<br>
-			WARNING: deleting a problem will remove EVERYTHING related to it.<br>
-			It is NOT recommended to change anything while the contest is running.<br>
-			To import a problem, fill in the following fields.<br>
-		To replace the data of a problem, proceed as if it did not exist (data will be replaced without removing it).</b></div>
-	</div><!--div.container-->
-</div><!--div.row-->
-<form name="form1" enctype="multipart/form-data" method="post" action="problem.php">
-	<input type=hidden name="confirmation" value="noconfirm" />
-	<center>
-		<table border="0">
-			<tr>
-				<td width="35%" align=right>Number:</td>
-				<td width="65%">
-					<input type="number" name="problemnumber" value="" size="20" maxlength="20" required/>
-				</td>
-			</tr>
-			<tr>
-				<td width="35%" align=right>Short Name (usually a letter, no spaces):</td>
-				<td width="65%">
-					<input type="text" name="problemname" value="" size="20" maxlength="20" />
-				</td>
-			</tr>
-<!--
-      <tr>
-        <td width="35%" align=right>Problem Fullname:</td>
-        <td width="65%">
-          <input type="text" name="fullname" value="" size="50" maxlength="100" />
-        </td>
-      </tr>
-      <tr>
-	 <td width="35%" align=right>Problem Basename (a.k.a. name of class expected to have the main):</td>
-        <td width="65%">
-          <input type="text" name="basename" value="" size="50" maxlength="100" />
-        </td>
-      </tr>
-      <tr>
-	 <td width="35%" align=right>Description file (PDF, txt, ...):</td>
-        <td width="65%">
-          <input type="file" name="problemdesc" value="" size="40" />
-        </td>
-      </tr>
-  -->
-  <tr>
-  	<td width="35%" align=right>Problem package (ZIP):</td>
-  	<td width="65%">
-  		<input type="file" name="probleminput" value="" size="40" />
-  	</td>
-  </tr>
-<!--
-      <tr>
-	 <td width="35%" align=right>Compare file archive (ZIP):</td>
-        <td width="65%">
-          <input type="file" name="problemsol" value="" size="40" />
-        </td>
-      </tr>
-      <tr>
-        <td width="35%" align=right>Timelimit (in sec):</td>
-        <td width="65%">
-          <input type="text" name="timelimit" value="" size="10" />
-(optional: use a , followed by the number of repetitions to run)
-        </td>
-      </tr>
-  -->
-  <tr>
-  	<td width="35%" align=right>Color name:</td>
-  	<td width="65%">
-  		<input type="text" name="colorname" value="" size="40" maxlength="100" />
-  	</td>
-  </tr>
-  <tr>
-  	<td width="35%" align=right>Color (RGB HTML format):</td>
-  	<td width="65%">
-  		<input type="text" name="color" value="" size="6" maxlength="6" />
-  	</td>
-  </tr>
-</table>
-</center>
-<center>
-	<input type="submit" name="Submit3" value="Send" onClick="conf()">
-	<input type="reset" name="Submit4" value="Clear">
-</center>
+										<td><b>Color</b></td>
+									</tr>
+									<tr>
+										<td nowrap>0 (fake)</td>
+										<td nowrap>General</td>
+										<td nowrap>&nbsp;</td>
+										<td nowrap>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td nowrap>&nbsp;</td>
+										<td nowrap>&nbsp;</td>
+									</tr>
+								</table></form>
+							</div><!--div.container-->
+						</div><!--div.row-->
+						<div class="container">
+							<div class="row">
+								<br>
+								<div class="mensajes-boca"><b>Clicking on a problem number will delete it.<br>
+									WARNING: deleting a problem will remove EVERYTHING related to it.<br>
+									It is NOT recommended to change anything while the contest is running.<br>
+									To import a problem, fill in the following fields.<br>
+								To replace the data of a problem, proceed as if it did not exist (data will be replaced without removing it).</b></div>
+							</div><!--div.container-->
+						</div><!--div.row-->
+						<br>
+						<div class="formularios">
+							<form name="form1" enctype="multipart/form-data" method="post" action="problem.php">
+								<input type=hidden name="confirmation" value="noconfirm" />
+								<!-- *************** -->
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="problemnumber"><strong>Number:</strong></label>
+										<input type="number" class="form-control" id="problemnumber" name="problemnumber" required>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="problemname"><strong>Short Name (usually a letter, no spaces):</strong></label>
+										<input type="text" class="form-control" id="problemname" name="problemname" placeholder="Name" required>
+									</div>
+								</div>
+								<!-- *************** -->
+								<!-- *************** -->
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="colorname"><strong>Color Name:</strong></label>
+										<select class="form-control" id="colorname" name="colorname">
+											<option selected value="black">Black</option>
+											<option  value="green">Green</option>
+											<option  value="blue">Blue</option>
+											<option  value="yellow">Yellow</option>
+											<option  value="white">White</option>
+											<option  value="cian">Cian</option>
+										</select>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="color"><strong>Color (RGB HTML format):</strong></label>
+										<input type="text" class="form-control" id="color" name="color" placeholder="#FFFFFF">
+									</div>
+								</div>
+								<!-- *************** -->
+								<div class="form-group">
+									<label for="probleminput"><strong>Import file:</strong></label>
+									<input type="file" class="form-control-file" id="probleminput" name="probleminput" accept="application/zip,application/x-zip,application/x-zip-compressed,application/octet-stream">
+								</div>
+								<!-- *************** -->
+								<div class="row justify-content-md-center">	
+									<input class="btn btn-primary" type="submit" name="Submit3" value="Send" onClick="conf()">
+									<p>&nbsp;&nbsp;</p>
+									<input class="btn btn-dark" type="reset" name="Submit4" value="Clear">
+								</div>
+							</div>
+							<br><br><div class="mensajes-boca">To build a problem package from files, use this link:
+								<input class="btn btn-secondary" type="submit" name="Submit5" value="Build">
+							</div>
+						</form>
 
-<br><br><br><center>To build a problem package from files, use this link:
-	<input type="submit" name="Submit5" value="Build">
-</center>
-</form>
-
-<!-- *************************************************************************************** -->
-</div><!--End div contenido-->
-<!-- *************************************************************************************** -->
-</div>
-<div class="row" id="footer">
-	<p>Powered by BOCA boca-1.5.13. Copyright (c) 2003-2017 BOCA System (bocasystem@gmail.com). All rights reserved.</p>
-</div>
-</div>
-<!--JS de Bootstrap-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!------------------------------------------------------------>
-<!--JavaScript: Se omite el atributo type="text/javascript" ya que en HTML5 no es necesario pues JavaScript es el lenguaje de Scripting por default-->
-<!--De momento se mantiene el código JS provisto en el código original-->
-<script src="js/main.js"></script>
-<!------------------------------------------------------------>
+						<!-- *************************************************************************************** -->
+					</div><!--End div contenido-->
+					<!-- *************************************************************************************** -->
+				</div>
+		<div class="row" id="footer">
+			<p>Powered by BOCA boca-1.5.13. Copyright (c) 2003-2017 BOCA System (bocasystem@gmail.com). All rights reserved.</p>
+		</div>
+	</div>
+	<!--JS de Bootstrap-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<!------------------------------------------------------------>
+	<!--JavaScript: Se omite el atributo type="text/javascript" ya que en HTML5 no es necesario pues JavaScript es el lenguaje de Scripting por default-->
+	<!--De momento se mantiene el código JS provisto en el código original-->
+	<script src="js/main.js"></script>
+	<!------------------------------------------------------------>
 </body>
 </html>
